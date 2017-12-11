@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>DOG API Material Project</span>
+        <span class="nav-spacer"></span>
+        <button mat-button [routerLink]="['random']">Get Random Image</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-list class="center-align">
+    <h2 mat-header>Breed List</h2>
+    <mat-list-item [routerLink]="['images']" [queryParams]="{breed: name}" *ngFor="let name of names" (click)="onSelect(name)">
+        <button mat-button>{{name}} </button>
+    </mat-list-item>
+</mat-list>

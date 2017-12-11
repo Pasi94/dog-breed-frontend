@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>DOG API Material Project</span>
+    <span class="nav-spacer"></span>
+    <button mat-button [routerLink]="['']">Back to Home Page</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="panel-heading">
+  <h2 align="center"> Random Picture {{breed_name}} </h2>
+</div>
+<div class="panel-body">
+  <div class="dataTable_wrapper">
+    <table class="table table-striped table-bordered table-hover">
+      <tbody>
+        <tr align="center">
+          <td>
+
+            <div>
+              <a *ngFor="let url of urls | slice:0:5;" class="list-group-item">
+                <img src="{{url}}">
+              </a>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
