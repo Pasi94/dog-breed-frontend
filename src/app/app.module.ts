@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.router';
-import { APIService } from "./api.service";
+import { APIService } from "./services/api.service";
+import { DogService } from "./services/dog.service";
 
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from "./pages/home/home.component";
 import { RouterModule } from "@angular/router";
-import { BreedImagesComponent } from './breed-images/breed-images.component';
-import { RandomComponent } from './random/random.component';
+import { DogDetailsComponent } from './pages/dog-details/dog-details.component';
+import { RandomComponent } from './pages/random/random.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
@@ -18,7 +20,7 @@ import { MaterialModule } from './material.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    BreedImagesComponent,
+    DogDetailsComponent,
     RandomComponent,
   ],
   imports: [
@@ -27,9 +29,11 @@ import { MaterialModule } from './material.module';
     RouterModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpModule,
+    
   ],
-  providers: [APIService],
+  providers: [APIService, DogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { APIService } from '../api.service';
 
 @Component({
   selector: 'app-random',
@@ -8,14 +7,12 @@ import { APIService } from '../api.service';
 })
 export class RandomComponent implements OnInit {
 
-  breedlist = [];
   
-    constructor(private apiService: APIService) { }
+    constructor() { }
    
     
     ngOnInit() {
 
-      this.apiService.getRandomImage().subscribe(data => this.breedlist = data);
   
     }
 

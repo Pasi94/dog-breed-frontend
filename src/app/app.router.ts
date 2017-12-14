@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
-import { BreedImagesComponent } from "./breed-images/breed-images.component";
-import { RandomComponent } from './random/random.component';
+import { HomeComponent } from "./pages/home/home.component";
+import { DogDetailsComponent } from './pages/dog-details/dog-details.component';
+import { RandomComponent } from './pages/random/random.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'home/images', component: BreedImagesComponent },
+  { path: 'images/:id', component: DogDetailsComponent },
   { path: 'home/random', component: RandomComponent },
 ];
 
