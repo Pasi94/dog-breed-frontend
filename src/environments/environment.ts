@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  backendURL: 'http://dog-back.herokuapp.com'  
+  backendURL: 'https://dog-back.herokuapp.com'  
 };
